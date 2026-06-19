@@ -25,7 +25,8 @@ class Graph{
     int size;
     int[][] gm;
     ArrayList<Node> nodes;
-    Graph (int size){
+
+    public Graph (int size){
         this.size=size;
         gm = new int[size][size];
         nodes = new ArrayList<>();
@@ -54,6 +55,7 @@ class Graph{
             System.out.println();
         }
     }
+    
     
 
 }

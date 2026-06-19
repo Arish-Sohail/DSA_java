@@ -5,7 +5,7 @@ import java.util.LinkedList;
 
 public class adjacency_list {
     public static void main(String[] args) {
-        Graph g = new Graph();
+        Graphl g = new Graphl();
 
         g.addNode(new Node('A'));
         g.addNode(new Node('B'));
@@ -24,10 +24,10 @@ public class adjacency_list {
 }
 
 
-class Graph{
+class Graphl{
     ArrayList<LinkedList<Node>> al;
 
-    public Graph() {
+    public Graphl() {
         al = new ArrayList<>();
     }
 
