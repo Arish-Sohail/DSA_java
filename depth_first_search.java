@@ -45,7 +45,6 @@ class GraphDFS extends Graph{
             }
             
         }
-        return;
     }
 
 }

@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -36,7 +35,7 @@ class GraphBFS extends Graph{
         queue.offer(s);
         v[s]=true;
 
-        while (queue.size()!=0){
+        while (!queue.isEmpty()){
             s=queue.poll();
             System.out.println(nodes.get(s).data+"--");
 
