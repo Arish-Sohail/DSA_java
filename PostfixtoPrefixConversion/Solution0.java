@@ -15,10 +15,23 @@ public class Solution0 {
         return false;
     }
 
-    static String postToPre(String s) {
+    public String postToPre(String s) {
         // s="AB+CD-*" ----> s="*+AB-CD"
         Stack<String> stack = new Stack<>();
 
-        return s;
+        for (int i = 0;i<s.length();i++){
+
+            if (isOp(s.charAt(i))){
+                String opd1 = stack.pop();
+                String opd2 = stack.pop();
+                String op = s.charAt(i)+"";
+                stack.push(op+opd2+opd1);
+            }
+            else{
+                stack.push(s.charAt(i)+"");
+            }
+        }
+
+        return stack.pop();
     }
 }
