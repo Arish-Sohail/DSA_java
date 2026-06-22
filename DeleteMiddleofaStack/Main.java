@@ -17,7 +17,7 @@ public class Main {
         sol.deleteMid(s);
 
         for (int i = 0; i<s.size();i++){
-            System.out.print(s.get(i) + ", ");
+            System.out.print(s.get(i) + " ");
         }
     }
 }
