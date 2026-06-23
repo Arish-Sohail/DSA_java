@@ -1,33 +1,23 @@
-import java.util.Stack;
+
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 
 public class trail{
     public static void main(String[] args) {
         String path = "/a";
         String[] file_names = path.split("/");
-        Stack<String> s = new Stack<>();
-        for (String a : file_names){
-            if (a.equals(".") || a.isEmpty()){
-                continue;
-            }
-            else if (a.equals("..")){
-                if (!s.isEmpty()){
-                    s.pop();
-                }
-            }
-            else{
-                s.push(a);
-            }
-        }
-        path = "";
-        while(!s.isEmpty()){
-            path ="/" + s.pop() + path;
-        }
-        if (path.equals("")){
-            path="/";
-        }
-        for (String a:s){
-            System.out.println(a);
-        }
-        System.out.println(path);
+        Deque<String> dq = new ArrayDeque<>();
+        dq.offer("a");
+        dq.offer("b");
+        dq.offer("c");
+        dq.offer("d");
+        dq.offer("e");
+        System.out.println(dq.removeLast());
+        System.out.println(dq.removeLast());
+        
+        // for (String a:dq){
+        //     System.out.println(a);
+        // }
     }
 }
