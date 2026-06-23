@@ -1,8 +1,8 @@
+package SimplifyPath;
 import java.util.Stack;
 
-public class trail{
-    public static void main(String[] args) {
-        String path = "/a";
+class Solution {
+    public String simplifyPath(String path) {
         String[] file_names = path.split("/");
         Stack<String> s = new Stack<>();
         for (String a : file_names){
@@ -25,9 +25,6 @@ public class trail{
         if (path.equals("")){
             path="/";
         }
-        for (String a:s){
-            System.out.println(a);
-        }
-        System.out.println(path);
+        return path;
     }
 }
